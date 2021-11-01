@@ -20,3 +20,16 @@
         <constructor-arg index="0" value="成贤学院"/>
         <constructor-arg index="1" value="东大路6号"/>
     </bean>
+
+   <bean id="myStudent" class="com.cxxy.Student">
+        <!--省略index方式构造注入-->
+        <constructor-arg value="张三"/>
+        <constructor-arg value="21"/>
+        <constructor-arg ref="mySchool"/>
+    </bean>
+    <bean id="mySchool" class="com.cxxy.School">
+        <constructor-arg value="成贤学院"/>
+        <constructor-arg value="东大路6号"/>
+    </bean>
+
+
